@@ -54,28 +54,7 @@
 
 `# /usr/local/lib/x86_64-linux-gnu`
 
-### 7. you have to add some PATHs in this file:
-
-`# sudo nano /etc/profile`
-
-in the lower line of this part:
-
-```if [ "`id -u`" -eq 0 ]; then
-  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-else
-  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
-fi```
-
-add the `/usr/local/sbin:` , `/usr/sbin:` , `/sbin:`
-to look like this:
-
-```if user=root then
-  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-otherwise
-  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games"
-fi```
-
-### 8. And at least execute:
+### 7. And at least execute:
 
 `# ldconfig
 
